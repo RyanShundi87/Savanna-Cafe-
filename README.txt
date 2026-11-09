@@ -33,3 +33,4 @@ and the W3C CSS Validation Service (https://jigsaw.w3.org/css-validator/).
 
 Validation Note:
 There are zero errors and zero remaining warnings across all HTML and CSS files.
+
