@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact &amp; Reservations | Savanna Brew Café</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/contact.css">
+</head>
+
+<body>
+
+    <!-- Header & Flexbox Navigation -->
+    <header class="site-header">
+        <div class="container header-inner">
+            <a href="index.html" class="brand-logo">
+                <img src="images/logo.png" alt="Savanna Brew Café coffee cup emblem">
+                <div class="brand-text">
+                    <span class="brand-name">Savanna Brew<span>.</span></span>
+                    <span class="brand-sub">Café &amp; Roastery • Westlands</span>
+                </div>
+            </a>
+
+            <nav class="main-nav" aria-label="Primary Navigation">
+                <ul class="nav-list">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="events.html">Events</a></li>
+                    <li><a href="contact.html" class="active">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="page-hero">
+            <div class="container">
+                <span class="eyebrow">Book Your Spot</span>
+                <h1>Contact &amp; Reservations</h1>
+                <p>Reserve a table for friends, study groups, or business meetings at 14 Coffee Lane, Westlands.</p>
+            </div>
+        </section>
+
+        <!-- Two-Column Layout for the table section -->
+        <section class="section-padding">
+            <div class="container contact-layout">
+
+                <!-- Reservation Form -->
+                <section class="contact-card" aria-labelledby="reservation-heading">
+                    <span class="eyebrow">Table Booking</span>
+                    <h2 id="reservation-heading">Reservation Form</h2>
+                    <p class="form-subtitle">Fields marked with an asterisk (*) are required.</p>
+                    <form id="reservation-form" action="#success-message" method="get" class="reservation-form">
+                        <div class="form-group">
+                            <label for="full-name">Full Name *</label>
+                            <input type="text" id="full-name" name="full_name" class="form-control"
+                                placeholder="e.g., Ryan Shabani" required>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="email">Email Address *</label>
+                                <input type="email" id="email" name="email" class="form-control"
+                                    placeholder="you@example.com" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="phone">Phone Number</label>
+                                <input type="tel" id="phone" name="phone" class="form-control"
+                                    placeholder="+254 700 123 456">
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <!-- Date Field -->
+                            <div class="form-group date-time-group">
+                                <label for="res-date">Date *</label>
+                                <div class="input-with-icon">
+                                    <input type="date" id="res-date" name="reservation_date" class="form-control"
+                                        required>
+                                </div>
+                            </div>
+
+                            <!-- Time Field -->
+                            <div class="form-group date-time-group">
+                                <label for="res-time">Time *</label>
+                                <div class="input-with-icon">
+                                    <input type="time" id="res-time" name="reservation_time" class="form-control"
+                                        required>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="guests">Number of Guests</label>
+                            <select id="guests" name="guests" class="form-control">
+                                <option value="1">1 Guest</option>
+                                <option value="2" selected>2 Guests</option>
+                                <option value="3">3 Guests</option>
+                                <option value="4">4 Guests</option>
+                                <option value="5">5 Guests</option>
+                                <option value="6">6 Guests</option>
+                                <option value="7">7 Guests</option>
+                                <option value="8">8 Guests</option>
+                                <option value="9">9 Guests</option>
+                                <option value="10">10 Guests</option>
+                            </select>
+                        </div>
+
+                        <fieldset class="occasion-fieldset">
+                            <legend>Occasion</legend>
+                            <div class="radio-group">
+                                <label for="occ-casual" class="radio-label">
+                                    <input type="radio" id="occ-casual" name="occasion" value="Casual" checked>
+                                    Casual
+                                </label>
+                                <label for="occ-birthday" class="radio-label">
+                                    <input type="radio" id="occ-birthday" name="occasion" value="Birthday">
+                                    Birthday
+                                </label>
+                                <label for="occ-business" class="radio-label">
+                                    <input type="radio" id="occ-business" name="occasion" value="Business">
+                                    Business
+                                </label>
+                            </div>
+                        </fieldset>
+
+                        <div class="form-group">
+                            <label for="special-requests">Special Requests / Enquiry</label>
+                            <textarea id="special-requests" name="special_requests" rows="4" class="form-control"
+                                placeholder="Let us know about dietary needs, power socket preferences, or group seating..."></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary">Book a Table</button>
+                    </form>
+                </section>
+
+                <!-- Find Us, Opening Hours Table & Map Section -->
+                <aside class="info-card" aria-labelledby="find-us-heading">
+                    <span class="eyebrow">Visit Our Café</span>
+                    <h2 id="find-us-heading">Find Us</h2>
+
+                    <ul class="contact-details-list">
+                        <li><strong>Address:</strong> 14 Coffee Lane, Westlands, Nairobi</li>
+                        <li><strong>Phone:</strong> +254 700 123 456</li>
+                        <li><strong>Email:</strong> info@savannabrew.co.ke</li>
+                        <li><strong>Social:</strong> Instagram @savannabrew, Facebook /savannabrewcafe</li>
+                    </ul>
+
+                    <h3>Opening Hours</h3>
+                    <div class="table-wrapper">
+                        <table class="hours-table">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Day</th>
+                                    <th scope="col">Hours</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">Monday to Friday</th>
+                                    <td>7:00 AM to 9:00 PM</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Saturday</th>
+                                    <td>8:00 AM to 10:00 PM</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Sunday</th>
+                                    <td>9:00 AM to 6:00 PM</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <!-- Embedded Google Map Iframe Section -->
+                    <iframe class="map-frame" title="Map showing Savanna Brew Café in Westlands, Nairobi"
+                        src="https://www.openstreetmap.org/export/embed.html?bbox=36.7950%2C-1.2720%2C36.8150%2C-1.2580&amp;layer=mapnik"
+                        loading="lazy">
+                    </iframe>
+
+                    <a href="https://www.google.com/maps/search/Westlands+Nairobi" target="_blank"
+                        class="btn btn-outline-dark">
+                        Open in Google Maps &#8599;
+                    </a>
+                </aside>
+
+            </div>
+        </section>
+
+        <!-- Booking Confirmation Modal Overlay -->
+        <div id="success-message" class="modal-overlay" role="dialog" aria-modal="true"
+            aria-labelledby="modal-booking-title" aria-hidden="true">
+            <div class="modal-content">
+                <button type="button" id="modal-close-btn" class="modal-close" aria-label="Close modal">&times;</button>
+                <div class="modal-header">
+                    <span class="success-icon" aria-hidden="true">&#10004;</span>
+                    <span class="eyebrow">Reservation Confirmed</span>
+                    <h3 id="modal-booking-title">Booking Details</h3>
+                    <p>Thank you for reserving a table at Savanna Brew Café. Below is a summary of your contact and
+                        reservation details.</p>
+                </div>
+
+                <div class="modal-details-grid">
+                    <div class="modal-detail-section">
+                        <h4>Contact Details</h4>
+                        <dl class="booking-summary-list">
+                            <div class="summary-row">
+                                <dt>Full Name</dt>
+                                <dd id="summary-name">&mdash;</dd>
+                            </div>
+                            <div class="summary-row">
+                                <dt>Email Address</dt>
+                                <dd id="summary-email">&mdash;</dd>
+                            </div>
+                            <div class="summary-row">
+                                <dt>Phone Number</dt>
+                                <dd id="summary-phone">&mdash;</dd>
+                            </div>
+                        </dl>
+                    </div>
+
+                    <div class="modal-detail-section">
+                        <h4>Reservation Details</h4>
+                        <dl class="booking-summary-list">
+                            <div class="summary-row">
+                                <dt>Date</dt>
+                                <dd id="summary-date">&mdash;</dd>
+                            </div>
+                            <div class="summary-row">
+                                <dt>Time</dt>
+                                <dd id="summary-time">&mdash;</dd>
+                            </div>
+                            <div class="summary-row">
+                                <dt>Guests</dt>
+                                <dd id="summary-guests">&mdash;</dd>
+                            </div>
+                            <div class="summary-row">
+                                <dt>Occasion</dt>
+                                <dd id="summary-occasion">&mdash;</dd>
+                            </div>
+                            <div class="summary-row summary-row-full">
+                                <dt>Special Requests</dt>
+                                <dd id="summary-requests">&mdash;</dd>
+                            </div>
+                        </dl>
+                    </div>
+                </div>
+
+                <button type="button" id="modal-done-btn" class="btn btn-primary modal-action-btn">Done</button>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>Savanna Brew Café</h3>
+                    <p>Brewed in Kenya. Served with love.</p>
+                    <p>14 Coffee Lane, Westlands, Nairobi</p>
+                    <p>Phone: +254 700 123 456</p>
+                    <p>Email: info@savannabrew.co.ke</p>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Opening Hours</h3>
+                    <p>Monday to Friday: 7:00 AM to 9:00 PM</p>
+                    <p>Saturday: 8:00 AM to 10:00 PM</p>
+                    <p>Sunday: 9:00 AM to 6:00 PM</p>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Connect &amp; Explore</h3>
+                    <ul class="footer-links">
+                        <li><a href="menu.html">View Our Menu (KES)</a></li>
+                        <li><a href="contact.html">Reserve a Group Table</a></li>
+                        <li><a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">Instagram:
+                                @savannabrew</a></li>
+                        <li><a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">Facebook:
+                                /savannabrewcafe</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Savanna Brew Café. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <!--JavaScript for Temporary Reservation Modal the only javascript that was used-->
+    <script>
+        (function () {
+            const form = document.getElementById('reservation-form');
+            const modal = document.getElementById('success-message');
+            const closeBtn = document.getElementById('modal-close-btn');
+            const doneBtn = document.getElementById('modal-done-btn');
+
+            function formatTime(timeStr) {
+                if (!timeStr) return '—';
+                const parts = timeStr.split(':');
+                if (parts.length < 2) return timeStr;
+                let hours = parseInt(parts[0], 10);
+                const minutes = parts[1];
+                const ampm = hours >= 12 ? 'PM' : 'AM';
+                hours = hours % 12 || 12;
+                return hours + ':' + minutes + ' ' + ampm;
+            }
+
+            function formatDate(dateStr) {
+                if (!dateStr) return '—';
+                const dateObj = new Date(dateStr + 'T00:00:00');
+                if (isNaN(dateObj.getTime())) return dateStr;
+                return dateObj.toLocaleDateString('en-KE', {
+                    weekday: 'short',
+                    year: 'numeric',
+                    month: 'short',
+                    day: 'numeric'
+                });
+            }
+
+            function closeModalAndClear() {
+                modal.classList.remove('is-open');
+                modal.setAttribute('aria-hidden', 'true');
+                if (window.location.hash === '#success-message') {
+                    history.replaceState(null, '', window.location.pathname + window.location.search);
+                }
+                form.reset();
+                ['summary-name', 'summary-email', 'summary-phone', 'summary-date', 'summary-time', 'summary-guests', 'summary-occasion', 'summary-requests'].forEach(function (id) {
+                    const el = document.getElementById(id);
+                    if (el) el.textContent = '—';
+                });
+            }
+
+            form.addEventListener('submit', function (event) {
+                event.preventDefault();
+
+                const fullName = document.getElementById('full-name').value.trim();
+                const email = document.getElementById('email').value.trim();
+                const phone = document.getElementById('phone').value.trim();
+                const resDate = document.getElementById('res-date').value;
+                const resTime = document.getElementById('res-time').value;
+                const guestsSelect = document.getElementById('guests');
+                const guestsText = guestsSelect.options[guestsSelect.selectedIndex].text;
+                const occasionInput = form.querySelector('input[name="occasion"]:checked');
+                const occasion = occasionInput ? occasionInput.value : 'Casual';
+                const specialRequests = document.getElementById('special-requests').value.trim();
+
+                document.getElementById('summary-name').textContent = fullName || '—';
+                document.getElementById('summary-email').textContent = email || '—';
+                document.getElementById('summary-phone').textContent = phone || 'Not provided';
+                document.getElementById('summary-date').textContent = formatDate(resDate);
+                document.getElementById('summary-time').textContent = formatTime(resTime);
+                document.getElementById('summary-guests').textContent = guestsText;
+                document.getElementById('summary-occasion').textContent = occasion;
+                document.getElementById('summary-requests').textContent = specialRequests || 'None';
+
+                modal.classList.add('is-open');
+                modal.setAttribute('aria-hidden', 'false');
+                closeBtn.focus();
+            });
+
+            closeBtn.addEventListener('click', closeModalAndClear);
+            doneBtn.addEventListener('click', closeModalAndClear);
+
+            modal.addEventListener('click', function (event) {
+                if (event.target === modal) {
+                    closeModalAndClear();
+                }
+            });
+
+            document.addEventListener('keydown', function (event) {
+                if (event.key === 'Escape' && modal.classList.contains('is-open')) {
+                    closeModalAndClear();
+                }
+            });
+        })();
+    </script>
+</body>
+
+</html>
